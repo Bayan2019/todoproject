@@ -1,0 +1,121 @@
+#app {
+    height: 100vh;
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    padding: 10% 0 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-origin: content-box;
+}
+
+h1 {
+    text-align: center;
+  }
+  
+  .todo-wrapper {
+    background-color: #8ACB9B;
+    margin: auto;
+    padding: 2%;
+    width: fit-content;
+    border-radius: 10px;
+    overflow-y: auto;
+  }
+  
+  .todo-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #0E2013;
+  }
+  
+  .todo-input-item {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .todo-input-item input {
+    width: 250px;
+    height: 30px;
+  }
+  
+  .todo-input-item input:focus {
+    outline: 3px solid #22B549;
+  }
+  
+  .todo-input-item button {
+    background-color: #22B549;
+    width: 100px;
+    height: 35px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .todo-input-item button:hover {
+    background-color: aquamarine;
+  }
+  
+  .secondary-button {
+    background-color: #d4e9da;
+    color: #1C6D90;
+    border: none;
+    border-radius: 7px;
+    width: fit-content;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .secondary-button:hover {
+    background-color: aquamarine;
+  }
+  
+  .active {
+    background-color: #22B549;
+  }
+  
+  .todo-list {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+  }
+  
+  .todo-list-item {
+    background-color: #B4DEF1;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .todo-input-item h3 {
+    color: #1C6D90;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  
+  .icons {
+    color: #2289B5;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  
+  .icons .trash:hover {
+    color: red;
+  }
+  
+  .icons .check:hover {
+    color: #21E71D;
+  }
