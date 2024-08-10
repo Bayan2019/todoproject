@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FaTrashAlt, FaClipboardCheck } from "react-icons/fa";
+import { FaTrashAlt, FaClipboardCheck, FaRegEdit } from "react-icons/fa";
 import logo from './assets/images/BayanSap.png';
 import './App.css';
 // import {Greet} from "../wailsjs/go/main/App";
@@ -93,54 +93,55 @@ function App() {
                     </div>
                 </div>
 
-            <div className='todo-input-item'>
-              {/* <label> </label> */}
-              <div>
-                <button type='button' onClick={handleAddTodo} 
-                className='primary-button'>Add</button>
-              </div>
+                <div className='todo-input-item'>
+                {/* <label> </label> */}
+                <div>
+                    <button type='button' onClick={handleAddTodo} 
+                    className='primary-button'>Add</button>
+                </div>
+                </div>
             </div>
-          </div>
 
-          <div className='button-area'>
-            <button className={`secondary-button ${isCompleteScreen === false && 'active'}`} 
-            onClick={() => setIsCompleteScreen(false)}>To Do</button>
-            <button className={`secondary-button ${isCompleteScreen === true && 'active'}`} 
-            onClick={() => setIsCompleteScreen(true)}>Completed</button>
-          </div>
+            <div className='button-area'>
+                <button className={`secondary-button ${isCompleteScreen === false && 'active'}`} 
+                onClick={() => setIsCompleteScreen(false)}>To Do</button>
+                <button className={`secondary-button ${isCompleteScreen === true && 'active'}`} 
+                onClick={() => setIsCompleteScreen(true)}>Completed</button>
+            </div>
 
-          <div className='todo-list'>
-            {isCompleteScreen===false && allTodos.map((item, index) => {
-              return (
-                <div className='todo-list-item' key={index}>
-                  <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
-                  <div className='icons'>
-                    <FaTrashAlt className='trash' onClick={() => handleDelete(index)}/>
-                    <FaClipboardCheck className='check' onClick={() => handleComplete(index)}/>
-                  </div>
-                </div>
-              )
-            })}
+            <div className='todo-list'>
+                {isCompleteScreen===false && allTodos.map((item, index) => {
+                return (
+                    <div className='todo-list-item' key={index}>
+                        <div>
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                        </div>
+                        <div className='icons'>
+                            <FaTrashAlt className='trash' onClick={() => handleDelete(index)}/>
+                            <FaClipboardCheck className='check' onClick={() => handleComplete(index)}/>
+                            <FaRegEdit className='check' onClick={() => handleComplete(index)}/>
+                        </div>
+                    </div>
+                )
+                })}
 
-            {isCompleteScreen===true && completedTodos.map((item, index) => {
-              return (
-                <div className='todo-list-item' key={index}>
-                  <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <p><small>{item.completedOn}</small></p>
-                  </div>
-                  <div className='icons'>
-                    <FaTrashAlt className='trash' onClick={() => handleDeleteCompleted(index)}/>
-                    {/* <FaClipboardCheck className='check' onClick={() => handleComplete(index)}/> */}
-                  </div>
-                </div>
-              )
-            })}
-          </div>
+                {isCompleteScreen===true && completedTodos.map((item, index) => {
+                return (
+                    <div className='todo-list-item' key={index}>
+                        <div>
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                            <p><small>{item.completedOn}</small></p>
+                        </div>
+                        <div className='icons'>
+                            <FaTrashAlt className='trash' onClick={() => handleDeleteCompleted(index)}/>
+                            {/* <FaClipboardCheck className='check' onClick={() => handleComplete(index)}/> */}
+                        </div>
+                    </div>
+                )
+                })}
+            </div>
 
         </div>
         </div>

@@ -1,3 +1,11 @@
+:root {
+    --sapar: #00bf63;
+    --b: #0ed0bf;
+    --lines: #0d08ec;
+    --grounds: #05f55e;
+    --danger: rgb(180, 4, 22);
+}
+
 #app {
     height: 100vh;
     text-align: center;
@@ -5,8 +13,8 @@
 
 #logo {
     display: block;
-    width: 50%;
-    height: 50%;
+    width: 20%;
+    height: 20%;
     margin: auto;
     padding: 10% 0 0;
     background-position: center;
@@ -17,43 +25,44 @@
 
 h1 {
     text-align: center;
-  }
+    color: var(--b);
+}
   
-  .todo-wrapper {
-    background-color: #8ACB9B;
+.todo-wrapper {
+    background-color: var(--b);
     margin: auto;
     padding: 2%;
     width: fit-content;
     border-radius: 10px;
     overflow-y: auto;
-  }
+}
   
-  .todo-inputs {
+.todo-inputs {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 25px;
     margin-bottom: 25px;
     border-bottom: 1px solid #0E2013;
-  }
+}
   
-  .todo-input-item {
+.todo-input-item {
     display: inline-block;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .todo-input-item input {
+.todo-input-item input {
     width: 250px;
     height: 30px;
-  }
+}
   
   .todo-input-item input:focus {
-    outline: 3px solid #22B549;
+    outline: 3px solid var(--sapar);
   }
   
   .todo-input-item button {
-    background-color: #22B549;
+    background-color: var(--sapar);
     width: 100px;
     height: 35px;
     border-top-right-radius: 10px;
@@ -63,7 +72,7 @@ h1 {
   }
   
   .todo-input-item button:hover {
-    background-color: aquamarine;
+    background-color: var(--grounds);
   }
   
   .secondary-button {
@@ -77,11 +86,11 @@ h1 {
   }
   
   .secondary-button:hover {
-    background-color: aquamarine;
+    background-color: var(--grounds);
   }
   
   .active {
-    background-color: #22B549;
+    background-color: var(--sapar);
   }
   
   .todo-list {
@@ -91,7 +100,8 @@ h1 {
   }
   
   .todo-list-item {
-    background-color: #B4DEF1;
+    background-color: yellow;
+    color: var(--b);
     display: flex;
     justify-content: space-between;
     border-radius: 15px;
@@ -107,7 +117,7 @@ h1 {
   }
   
   .icons {
-    color: #2289B5;
+    color: var(--lines);
     font-size: 35px;
     cursor: pointer;
   }
@@ -117,5 +127,5 @@ h1 {
   }
   
   .icons .check:hover {
-    color: #21E71D;
+    color: var(--grounds);
   }
